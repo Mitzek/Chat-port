@@ -19,7 +19,7 @@ mongoose.connect(process.env.DB_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
 }).then(()=> {
-    console.log("DB Connection Successful")
+    console.log("Database Connection Successful")
 }).catch((error)=>{console.log(error);})
 
 const server = app.listen(process.env.PORT, () => {
@@ -38,14 +38,14 @@ const io = socket(server, {
 
 io.on("connection", (socket) => {
     global.chatSocket = socket;
-    socket.on("add-user",(userId) => {
-        onlineUsers.set(userId, socket.id);
+    socket.on("add-user",(user_id) => {
+        onlineUsers.set(user_id, socket.id);
         
     });
-    socket.on("send-msg", (data)=> {
+    socket.on("send-message", (data)=> {
         const sendUserSocket = onlineUsers.get(data.to);
         if(sendUserSocket) { 
-            socket.to(sendUserSocket).emit("msg-receive", data.message)
+            socket.to(sendUserSocket).emit("message-receive", data.message)
        
         }
        

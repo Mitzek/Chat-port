@@ -3,53 +3,73 @@
     height: 100vh;    
     display: flex;
     justify-content: center;
-    align-items: center;        
+    align-items: center; 
+    margin: 0;       
 }
 
 .chatBox {
     height: 90vh;
     width: 88%;
-    background-color: rgb(39, 39, 39);
+    background-color: #edf8f8;
     display: flex;
     justify-content: space-around;
     align-items: center;
     border-radius: 10px;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    padding: 0 10px;
+}
+
+.firstDisplay {
+    
+    font-size: 1.5rem;
+    text-align: center;
+    position: relative;
+    top: 300px;
+    font-weight: 600;
 
 }
 
 .contactContainer {
         width: 20vw;
-        height: 80vh;        
-        background-color: rgb(20, 20, 20);
+        height: 82vh;        
         border-radius: 10px;
         overflow: auto;
         padding: 10px;
+        background-color: #edf8f8;
+        border: 1px solid rgb(211, 210, 210);
+        color: Black;
+        font-size: 15px;
 }
 
+.contactContainer h2 {
+    margin: 0;
+}
 
 .mainChatContainer {
-    width: 40vw;
-    height: 80vh;        
-    background-color: rgb(20, 20, 20);
+    width: 42vw;
+    height: 82vh;        
     border-radius: 10px; 
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
+    background-color: #edf8f8;
+    border: 1px solid rgb(211, 210, 210);
 }
 
 
 .sideBarContainer {
     width: 20vw;
-    height: 80vh;        
-    background-color: rgb(20, 20, 20);
+    height: 82vh;        
+    
     border-radius: 10px;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
     gap: 1.5rem;
     align-items: center;
-    color: white;
+    background-color: #edf8f8;
+    border: 1px solid rgb(211, 210, 210);
     
 }
 
@@ -64,7 +84,7 @@
 
 }
 .sideBarOptions div { 
-    background-color: gray;
+    background-color: #04F06A;
     width: 200px;
     padding: 10px;
     border-radius: 15px;
@@ -77,10 +97,10 @@
 .profileImg {
     width: 150px;
     height: 150px;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     margin-top: 5%;
     border-radius: 200px;
-    border: 5px solid royalblue;
+    border: 3px solid #00740f;    
     object-fit:scale-down;
 }
 
@@ -96,54 +116,58 @@
 }
 
 .contact div { 
-    background-color: gray;
+    
     width: 100%;
-    height: 100%;
-    border-radius: 100px;
+    
+    border-radius: 10px;
     text-align: center;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     cursor: pointer;
+    background-color: #04F06A;
+    color: white;
 }
 
-.contact h2 {
-    color:white;
-    margin: 5%;
-}
 
 
 .contactClassImg {
-    width: 70px;
-    height: 70px;
-    background-color: royalblue;
-    margin-top: 2%;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    margin: 2% 0;
     padding: 2px;
     border-radius: 100px;
     object-fit:scale-down;
+    border: 2px solid #00740f;    
     
      
 }
 
 .contactClassName {
-        color: white;
+        color: black;
 }
 .contactClass p { 
     color: white;
 }
 
 .mainChat {
-    width: 95%;
+    width: 100%;
     height: 100vh;
-    background-color: rgb(110, 110, 110);
     border-radius: 10px;
-    overflow:auto;
+     overflow-x: hidden;
+   overflow-y: scroll;
+ 
+    
 }
-
+.mainChat::-webkit-scrollbar {
+    display: none;
+}
 .chatInputContainer {
         display: flex;
         flex-direction: row;
         width: 100%;
+        
 }
 
 .buttonContainer {
@@ -157,11 +181,13 @@
     margin: 5px;
     font-size: 1.5rem;
     cursor:pointer;
+    display: none;
 
 }
 
 .emoji-picker-react { 
     background-color: black;
+    margin: auto;
 }
 .msgInputForm {
     display: flex;
@@ -177,49 +203,60 @@
     box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
     border: 0px;
     margin: 5px;
-    background-color: lightblue;
-    font-size: 20px;
-
+    font-size: 15px;
+    padding-left: 10px;
+    border: 1px solid rgb(80, 80, 80);
+    background-color: #edf8f8;
 }
 
 .chatButton {
     width: 15%;
     height: 5vh;  
-    align-self: center;
     border-radius: 5px;
-    border: 0px;
     margin: 5px;
     box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-    background-color: royalblue;
+    background-color: #04F06A;
     color: white;
     cursor: pointer;
-    font-size: 1.2rem;
-
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
 }
 
-
+.parentBox {
+    width: 100%;
+    height: 100vh;
+    border-radius: 10px;
+     overflow-x:auto;
+   overflow-y: hidden;
+   position: relative;
+}
 
 .currentSelectedCt {
-        background-color: gray; 
-        width: 92%;
-        height: 20%;
-        border-radius: 20px;
-        margin: 10px;
+    background-color: #04F06A;
+        width: 100%;
+        height: 9%;
+        border-radius: 5px; 
+        margin: 1px;
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        float: center;
+        justify-content:space-evenly;
+        flex-direction: row;
+        align-items: center;     
         
         
 }
-
+.currentSelectedCt h2 {
+    font-weight: 400;
+}
 
 .currentContactImg {
-
-    width: 70px;
-    height: 70px;
-    background-color: royalblue;
-    margin-top: 2%;
+    
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    margin-top: 0 2%;
     padding: 2px;
     border-radius: 100px;
     object-fit:scale-down;
@@ -235,11 +272,12 @@
         padding: 1%;
         float: left;
         word-wrap: break-word; 
+        background-color: rgb(17, 97, 53);
 }
 
 .sendingMsg {
         float: right;
-        background-color: rgb(15, 115, 155);
+        background-color: rgb(37, 202, 111);
         width: 50%;
         margin: 1% 5%;
         border-radius: 10px;
@@ -260,11 +298,12 @@
 @media(max-width: 700px) {
 
     .chatContainer {
-        width: 100%;
+        width: 90%;
         height: 100%;    
         display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;   
+    margin: auto; 
     }
     .chatContainer div {
         margin: 10px 0;  
@@ -279,21 +318,24 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 10px;
+
         
     }
 
     .contactContainer {
-        width: 95vw;
-        height: 20vh;        
+        width: 85vw;
+        height: 15vh;        
         display: flex;
         overflow: auto;
-        
         margin: 0;
+        margin-bottom: 200px;
+        
 }
 
 .mainChatContainer {
-    width: 100%;
-    height: 80%;        
+    width: 95%;
+    height: 10%;        
     flex-direction: column;
     align-items: center;
 }
@@ -316,7 +358,7 @@
     flex-flow: column;
     justify-content: space-evenly;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
     
 
 }
@@ -329,9 +371,9 @@
 
 
 .profileImg {
-    width: 150px;
-    height: 150px;
-    background-color: white;
+    width: 100px;
+    height: 100px;
+    
     margin-top: 2%;
 }
 
@@ -343,11 +385,12 @@
     align-items: center;
     gap: 0rem;
     
+    
 }
 
 .contact div { 
     background-color: transparent;
-    width: 30vw;
+    width: 22vw;
     height: 20vh;
     text-align: center;
     display: flex;
@@ -355,45 +398,49 @@
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
+    margin: 0;
     
 }
 
 .contact h2 {
-    color:white;
-    margin: 5%;
+   
+    margin: 2%;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .contactClassImg {
-    width: 80px;
-    height: 80px;
-    background-color: white;
+    width: 50px;
+    height: 50px;
+    
     padding: 2px;
     border-radius: 100px;
-    object-fit:scale-down;
+    object-fit:contain;
     
 }
 
-
-.contactClass p { 
-    color: white;
+.parentBox {
+    width: 100%;
+    height: 65vh;
+    border-radius: 10px;
+     overflow-x: hidden;
+   overflow-y: hidden;
+  
+ 
 }
+
 
 .mainChat {
     width: 95%;
     height: 60vh;
-    background-color: rgb(110, 110, 110);
     border-radius: 10px;
 }
 
-.currentUser {
- 
-
-}
 
 .msgInputForm {
     display: flex;
     flex-direction: row;
-    width: 90%;
+    width: 100%;
 }
 
 .chatInput {
@@ -401,10 +448,8 @@
     height: 5vh;
     align-self: flex-end;
     border-radius: 5px;
-    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
     border: 0px;
     margin: 5px;
-    background-color: lightblue;
     font-size: 20px;
 
 }
@@ -420,34 +465,64 @@
 
 
 .currentSelectedCt {
-        background-color: gray; 
+       
         width: 95%;
-        height: 10vh;
+        height: 8vh;
         border-radius: 10px;
-        margin-left: 20%;
-        align-self: center;
+        margin-left: 0;
+        align-self: center; 
         
-        
+}
+
+.currentSelectedCt h2 {
+   
+    font-size: 1rem;
+
 }
 
 .currentContactImg {
     width: 50px;
     height: 50px;
-    
-    margin-top: 1%;
+    margin-top: 0%;
     padding: 2px;
+
+}
+.receivingMsg {
+    width: 50%;
+    margin: 1% 0%;    
+    padding: 2% 2% 0 2%;
+    font-size: 0.9rem;
     
-    
+}
+
+.sendingMsg {
+    width: 50%;
+    margin: 1% 1%;
+    padding: 2% 2% 0 2%;
+    font-size: 0.9rem;
+}
+.time {
+font-size: 0.7rem;
+margin: 20px 0 0 0;
 
 }
 
-.currentContact  {
-    width: 100px;
-    height: 100px;
-    
+.emoji {
+    margin: 0px;
+    font-size: 1.5rem;
+    cursor:pointer;
+
 }
-.currentContact h2 {
-    display: inline-block
+
+.emoji-picker-react { 
+  
 }
+
+.firstDisplay {
+
+        top: 250px;
+}
+
+
 
 }

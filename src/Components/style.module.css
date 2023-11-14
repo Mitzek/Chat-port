@@ -4,22 +4,55 @@ body {
         
 }
 
+.logo {
+    color: black;
+    font-family: oswald;
+}
+
+.logo span {
+    margin-right: 10px;
+    
+}
 
 .menu {
-    width: 100%;
-    line-height: 5vh;
-    background-color: rgb(39, 39, 39);
+    line-height: 2.5vh;
     text-align: center;
     padding: 0;
-    margin: 0;
-    color: rgb(15, 165, 224);
+    font-size:25px;
 }
 .menu h1 {
     margin: 0;
 }
 
+.menu p {
+    font-size: 20px;
+    margin: 0
+}
+
 .avatarContainer img {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
+}
+
+@media(max-width: 700px) {
+
+    .menu {
+        width: 95%;
+        line-height: 0vh;
+        padding: 1px;
+        margin: 10px;
+        border-radius: 10px;
+        font-size:15px;
+    }
+
+    .menu h1 {
+        margin: 0;
+    }
+    
+    .menu p {
+        font-size: 10px;
+        margin: 0
+    }
+
 }
 

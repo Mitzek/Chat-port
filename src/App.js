@@ -56,6 +56,7 @@ function App() {
 
           {!auth && (
             <>
+            
               <Route path="/register" element={<Register/> }/>
               <Route path="/login" element={<SignIn/>} />
               <Route path="/" element={<SignIn/>} />

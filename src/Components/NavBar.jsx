@@ -1,18 +1,20 @@
-import React from 'react'
-import styles from './style.module.css'
+import React from "react";
+import styles from "./style.module.css";
 
-function NavBar({signOut}) {
+function NavBar({ signOut }) {
   return (
-      <>
-    <nav>
-      <div className={styles.menu}>
-          <h2>CHATPORT</h2>
+    <>
+      <nav>
+        <div className={styles.menu}>
+          <h2 className={styles.logo}>
+            {" "}
+            <span className="material-symbols-outlined">chat</span>CHAT PORT
+          </h2>
           <p>Get Connected! </p>
-    </div>
-    </nav>
-    
-   </>
-  )
+        </div>
+      </nav>
+    </>
+  );
 }
 
-export default NavBar
+export default NavBar;
