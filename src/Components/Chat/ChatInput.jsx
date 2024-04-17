@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import style from "./chatStyle.module.css";
 import Picker from "emoji-picker-react";
 import { IoMdSend } from "react-icons/io";

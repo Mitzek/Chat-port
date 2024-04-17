@@ -3,8 +3,8 @@ import style from "./chatStyle.module.css";
 import CurrentChat from "./CurrentChat";
 import ChatInput from "./ChatInput";
 import axios from "axios";
-import { sendMsgRoute } from "../Authentication/API/APIRoutes.js";
-import { getAllMsgsRoute } from "./../Authentication/API/APIRoutes";
+import { sendMsgRoute } from "../../services/apiRoutes";
+import { getAllMsgsRoute } from "../../services/apiRoutes";
 
 function MainChat({ currentUser, selectedUser, socket }) {
   const scrollRef = useRef();

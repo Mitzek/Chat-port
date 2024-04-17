@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./chatStyle.module.css";
+import style from "../chat/chatStyle.module.css";
 import { useNavigate } from "react-router-dom";
 
 function SideBar({ currentUser }) {

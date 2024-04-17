@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./style.module.css";
 
-function NavBar({ signOut }) {
+function NavBar() {
   return (
     <>
       <nav>

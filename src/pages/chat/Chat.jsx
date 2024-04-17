@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
-import styles from "./chatStyle.module.css";
+import styles from "../../components/chat/chatStyle.module.css";
 import { useNavigate } from "react-router-dom";
-import Contacts from "./Contacts.jsx";
-import SideBar from "./SideBar";
-import MainChat from "./MainChat";
+import ContactSideBar from "../../components/sidebar/contacts/ContactSideBar.jsx";
+import SideBar from "../../components/sidebar/SideBar.jsx";
+import MainChat from "../../components/chat/MainChat.jsx";
 import { io } from "socket.io-client";
-import { host } from "../Authentication/API/APIRoutes.js";
+import { host } from "../../services/apiRoutes.js";
 
 function Chat() {
   const socket = useRef();
@@ -42,7 +42,7 @@ function Chat() {
     <>
       <div className={styles.chatContainer}>
         <div className={styles.chatBox}>
-          <Contacts currentUser={currentUser} selectChat={selectChat} />
+          <ContactSideBar currentUser={currentUser} selectChat={selectChat} />
 
           <div className={styles.mainChatContainer}>
             <MainChat

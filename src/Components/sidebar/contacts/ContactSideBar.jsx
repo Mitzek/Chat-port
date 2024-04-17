@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import styles from "./chatStyle.module.css";
-import CurrentChat from "./CurrentChat";
-import MainChat from "./MainChat";
-import { allUsersRoute } from "../Authentication/API/APIRoutes";
+import styles from "../../chat/chatStyle.module.css";
+import { allUsersRoute } from "../../../services/apiRoutes";
 import axios from "axios";
+import Contact from "./Contact";
 
 function Contacts({ currentUser, selectChat }) {
   const [contacts, setContacts] = useState([]);
@@ -29,24 +28,8 @@ function Contacts({ currentUser, selectChat }) {
       <div>
         <div className={styles.contactContainer}>
           <div className={styles.contact}>
-            <h2>Chats</h2>
-            {contacts.map((ct) => {
-              return (
-                <div
-                  key={ct._id}
-                  onClick={(index) => {
-                    selectChat(ct);
-                  }}
-                >
-                  <img
-                    className={styles.contactClassImg}
-                    src={ct.avatarImage}
-                    alt=""
-                  />
-                  <p className={styles.contactClassName}>{ct.name}</p>
-                </div>
-              );
-            })}
+            <h2>Contacts</h2>
+            <Contact contacts={contacts} selectChat={selectChat}/>
           </div>
         </div>
       </div>
